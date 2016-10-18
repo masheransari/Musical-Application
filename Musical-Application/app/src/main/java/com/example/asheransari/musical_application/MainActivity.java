@@ -14,12 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
 
-        CatagoryAdapter catagoryAdapter = new CatagoryAdapter(this, getSupportFragmentManager());
+//        CatagoryAdapter catagoryAdapter = new CatagoryAdapter(this, getSupportFragmentManager());
 
-        viewPager.setAdapter(catagoryAdapter);
+        PagerClass pagerClass = new PagerClass(getSupportFragmentManager());
 
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabs);
-
-        tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(pagerClass);
     }
 }
